@@ -7,7 +7,8 @@ def print_header_info(h):
     if h['global_palette_flag']:
         print(f"Palette size: {h['palette_size']} colors")
 
-def lzw_decode(min_code_size, data): clear_code = 1 << min_code_size
+def lzw_decode(min_code_size, data):
+    clear_code = 1 << min_code_size
     end_code = clear_code + 1
 
     code_size = min_code_size + 1
@@ -69,3 +70,4 @@ def lzw_decode(min_code_size, data): clear_code = 1 << min_code_size
         prev = entry
 
     return result
+
